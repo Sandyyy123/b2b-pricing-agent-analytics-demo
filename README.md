@@ -20,3 +20,5 @@ This repository implements a callable Python reference architecture aligned with
 python3 main.py --seed 20261105 --out results.json
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 pytest -v test_pricing_analytics.py
 ```
+
+See [`README_SCOPE_NOTE.md`](./README_SCOPE_NOTE.md) for explicit synthetic fixture, between-account CLV variation, OLS slope, and sensitivity-multiplier disclosures.
