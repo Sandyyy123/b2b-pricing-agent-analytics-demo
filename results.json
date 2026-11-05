@@ -1,0 +1,172 @@
+{
+  "synthetic_disclaimer": "All customer records, elasticities, CLV figures, and realization bridges in this output are computed from synthetic B2B SaaS transactions for architecture and testing illustration only. They do not represent client production data or claim pre-verified commercial uplift.",
+  "seed": 20261105,
+  "milestone_1_foundations": {
+    "status": "PASS",
+    "total_rows": 768,
+    "unique_accounts": 64,
+    "invoice_sum_usd": 6767783.78,
+    "ledger_control_usd": 6767783.78,
+    "reconciliation_diff_usd": 0.0,
+    "portfolio_gross_margin_pct": 0.7816,
+    "below_cost_rows": 0,
+    "warnings": []
+  },
+  "milestone_2_customer_analytics": [
+    {
+      "segment": "Strategic_Enterprise",
+      "accounts": 18,
+      "observations": 216,
+      "mean_recency_days": 24.8,
+      "mean_frequency_months": 12.0,
+      "monthly_arpa_usd": 22656.64,
+      "gross_margin_pct": 0.7846,
+      "monthly_retention_rate": 0.9444,
+      "clv_24m_p10_usd": 174432.72,
+      "clv_24m_p50_usd": 208828.92,
+      "clv_24m_p90_usd": 249726.52
+    },
+    {
+      "segment": "MidMarket_Expansion",
+      "accounts": 19,
+      "observations": 228,
+      "mean_recency_days": 22.7,
+      "mean_frequency_months": 12.0,
+      "monthly_arpa_usd": 5684.0,
+      "gross_margin_pct": 0.7854,
+      "monthly_retention_rate": 0.9167,
+      "clv_24m_p10_usd": 34492.87,
+      "clv_24m_p50_usd": 40222.23,
+      "clv_24m_p90_usd": 46890.96
+    },
+    {
+      "segment": "PriceSensitive_SMB",
+      "accounts": 13,
+      "observations": 156,
+      "mean_recency_days": 25.1,
+      "mean_frequency_months": 12.0,
+      "monthly_arpa_usd": 873.11,
+      "gross_margin_pct": 0.7771,
+      "monthly_retention_rate": 0.9295,
+      "clv_24m_p10_usd": 5754.5,
+      "clv_24m_p50_usd": 6884.88,
+      "clv_24m_p90_usd": 8058.36
+    },
+    {
+      "segment": "AtRisk_Renewal",
+      "accounts": 14,
+      "observations": 168,
+      "mean_recency_days": 145.8,
+      "mean_frequency_months": 12.0,
+      "monthly_arpa_usd": 2629.72,
+      "gross_margin_pct": 0.7764,
+      "monthly_retention_rate": 0.7381,
+      "clv_24m_p10_usd": 4551.0,
+      "clv_24m_p50_usd": 5580.2,
+      "clv_24m_p90_usd": 6679.82
+    }
+  ],
+  "milestone_3_price_optimization": [
+    {
+      "segment": "Strategic_Enterprise",
+      "accounts": 18,
+      "observations": 216,
+      "status": "OPTIMIZED_WITH_GUARDRAILS",
+      "elasticity_hat": -0.5563,
+      "elasticity_se": 0.1935,
+      "elasticity_ci95": [
+        -0.9355,
+        -0.1771
+      ],
+      "baseline_unit_price_usd": 122.03,
+      "recommended_price_change_pct": 0.06,
+      "recommended_unit_price_usd": 129.35,
+      "expected_margin_lift_p10_pct": 0.0125,
+      "expected_margin_lift_p50_pct": 0.0369,
+      "expected_margin_lift_p90_pct": 0.0628,
+      "mean_discount_leakage_pct": 0.0272,
+      "guardrail_applied": "STRATEGIC_PROTECTED_CAP_6PCT"
+    },
+    {
+      "segment": "MidMarket_Expansion",
+      "accounts": 19,
+      "observations": 228,
+      "status": "OPTIMIZED_WITH_GUARDRAILS",
+      "elasticity_hat": -0.454,
+      "elasticity_se": 0.161,
+      "elasticity_ci95": [
+        -0.7695,
+        -0.1385
+      ],
+      "baseline_unit_price_usd": 86.57,
+      "recommended_price_change_pct": 0.1,
+      "recommended_unit_price_usd": 95.23,
+      "expected_margin_lift_p10_pct": 0.0355,
+      "expected_margin_lift_p50_pct": 0.0709,
+      "expected_margin_lift_p90_pct": 0.1084,
+      "mean_discount_leakage_pct": 0.0265,
+      "guardrail_applied": "DEFAULT_MAX_INCREASE_10PCT"
+    },
+    {
+      "segment": "PriceSensitive_SMB",
+      "accounts": 13,
+      "observations": 156,
+      "status": "OPTIMIZED_WITH_GUARDRAILS",
+      "elasticity_hat": -1.5146,
+      "elasticity_se": 0.2105,
+      "elasticity_ci95": [
+        -1.9271,
+        -1.1021
+      ],
+      "baseline_unit_price_usd": 48.34,
+      "recommended_price_change_pct": -0.04,
+      "recommended_unit_price_usd": 46.4,
+      "expected_margin_lift_p10_pct": 0.0228,
+      "expected_margin_lift_p50_pct": 0.0071,
+      "expected_margin_lift_p90_pct": -0.0085,
+      "mean_discount_leakage_pct": 0.0583,
+      "guardrail_applied": "DEFAULT_MAX_INCREASE_10PCT"
+    },
+    {
+      "segment": "AtRisk_Renewal",
+      "accounts": 14,
+      "observations": 168,
+      "status": "OPTIMIZED_WITH_GUARDRAILS",
+      "elasticity_hat": -2.1854,
+      "elasticity_se": 0.2151,
+      "elasticity_ci95": [
+        -2.607,
+        -1.7638
+      ],
+      "baseline_unit_price_usd": 69.94,
+      "recommended_price_change_pct": -0.04,
+      "recommended_unit_price_usd": 67.15,
+      "expected_margin_lift_p10_pct": 0.0485,
+      "expected_margin_lift_p50_pct": 0.0325,
+      "expected_margin_lift_p90_pct": 0.0165,
+      "mean_discount_leakage_pct": 0.0542,
+      "guardrail_applied": "AT_RISK_CHURN_FREEZE_0PCT"
+    }
+  ],
+  "milestone_4_5_forecast_and_realization": {
+    "baseline_monthly_revenue_usd": 563981.98,
+    "baseline_monthly_gross_margin_usd": 442219.53,
+    "monthly_bridge_usd": {
+      "gross_list_price_effect_usd": 33342.12,
+      "unapproved_discount_leakage_usd": -12515.21,
+      "volume_and_retention_offset_usd": -8035.09,
+      "net_realized_monthly_lift_p50_usd": 12791.82
+    },
+    "price_realization_ratio": 0.3837,
+    "forecast_90d_net_lift_usd": {
+      "p10": 26095.32,
+      "p50": 38375.46,
+      "p90": 49120.59
+    },
+    "forecast_12m_net_lift_usd": {
+      "p10": 104381.26,
+      "p50": 153501.86,
+      "p90": 196482.38
+    }
+  }
+}
